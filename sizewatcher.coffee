@@ -1,8 +1,7 @@
 # Check for support in a browser.
 # Basically just queryselector and getElementsByClassName
 checksupport = ->
-  return true if 'querySelector' of document and 'getElementsByClassName' of document
-  false
+  return 'getElementsByClassName' of document
 
 
 
@@ -49,7 +48,7 @@ class SizeWatcher
     if typeof @container is 'string'
       @container = document.querySelector @container
 
-    @timerTimeout = options.timerTimeout ? 125
+    @timerTimeout = options.timerTimeout ? 25
     @boxSize = options.boxSize ? 'auto'
 
 

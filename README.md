@@ -1,6 +1,6 @@
 # SizeWatcher
 
-Manipulate the DOM and call events if the width of the viewport, or one of the element on the page, is between our out of a certain range.
+Manipulate the DOM and call events if the width of the viewport, or one of the element on the page, is between or out of a certain range.
 
 With responsive designs and adaptive layouts it becomes more and more needed to move around certain elements on the page. This can easily be done with SizeWatcher.
 
@@ -17,15 +17,15 @@ With responsive designs and adaptive layouts it becomes more and more needed to 
     });
       	
 
-The `new SizeWatcher` class calee initates an element which size needs to be watched.
+The `new SizeWatcher` class callee initates an element which size needs to be watched.
 
 With the `breakpoint` method you set the certain widths between which everything needs to happen.
 
-For example, the `condensed` method is only present when the width of the `body` elment is between 400 and 600 pixels.
+For example, the `condensed` class is only present when the width of the `body` elment is between 400 and 600 pixels.
 
 With `order` you specify the selectors in which order the matched elements need to appear in the dom.
 
-Also, the `enter` callback function is called once when the user resizes or rotates the screen and it becomes within range.
+Also, the `enter` callback function is called once when the user resizes or rotates the screen and it becomes within range. (The opposite is the `leave` callback, which is called when it becomes out of range.)
 
 ## Demo
 
@@ -42,7 +42,7 @@ Accepts two arguments: the selector of one element (preferrably the `body` or an
 The following options can be used in the `options` object:
 
 * str `boxSize` - can have values `"auto"` (default), `"border-box"` and `"content-box"`. Auto will use border-box width on the `body` element and `content-box` on other elements. Border-box is the width of the box, plus the horizontal padding and border widths. Content-box is the 'inner' width of a box.
-* int `timerTimeout` - amount of milliseconds before changes are applied. Defaults to 125ms.
+* int `timerTimeout` - amount of milliseconds before changes are applied. Defaults to 25ms.
 
 
 ### `breakpoint` method
@@ -55,6 +55,8 @@ The `options` object can hold the following parameters:
 
 * str `className` - the class name that will be added or removed when in or out of the range.
 * arr of strs `order` - array of strings with selectors indicating the order. Will be shuffled around on enter, not on leave.
+* function `enter` - callback when the breakpoit becomes in range. Gets as first argument the element specified in the constructor, and second the width of that element.
+* function `leave` - callback when the breakpoit becomes out of range. Receives the same arguments as `enter`.
 * arr of objects `move` - array with instructions on how to move elements around on the page. The objects in the array can have the following options:
   * str `selector` - which is going to match the elements that need to be swapped.
   * str `to` - to which element the matched element need to be appended / inserted.
