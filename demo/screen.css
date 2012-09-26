@@ -1,0 +1,18 @@
+body {
+  background: #f8f8f8;
+  font-family: Helvetica; }
+
+div {
+  padding: 1em; }
+
+#first {
+  background: #ccffcc; }
+
+#second {
+  background: #ccccff;
+  width: 40%; }
+  #second div {
+    background: #cccccc; }
+
+.condensed {
+  font-style: italic; }
