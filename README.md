@@ -55,8 +55,8 @@ The `options` object can hold the following parameters:
 
 * str `className` - the class name that will be added or removed when in or out of the range.
 * arr of strs `order` - array of strings with selectors indicating the order. Will be shuffled around on enter, not on leave.
-* function `enter` - callback when the breakpoit becomes in range. Gets as first argument the element specified in the constructor, and second the width of that element.
-* function `leave` - callback when the breakpoit becomes out of range. Receives the same arguments as `enter`.
+* function `enter` - callback when the breakpoint becomes in range. Gets as first argument the element specified in the constructor, and second the width of that element.
+* function `leave` - callback when the breakpoint becomes out of range. Receives the same arguments as `enter`.
 * arr of objects `move` - array with instructions on how to move elements around on the page. The objects in the array can have the following options:
   * str `selector` - which is going to match the elements that need to be swapped.
   * str `to` - to which element the matched element need to be appended / inserted.
