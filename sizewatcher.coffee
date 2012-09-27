@@ -1,3 +1,5 @@
+# SizeWatcher, by Arjan Eising 2012. License: MIT. https://github.com/arjaneising/SizeWatcher
+
 # Check for support in a browser.
 # Basically just queryselector and getElementsByClassName
 checksupport = ->
