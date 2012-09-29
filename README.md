@@ -1,5 +1,7 @@
 # SizeWatcher
 
+*[Demo at arjaneising.github.com/SizeWatcher](http://arjaneising.github.com/SizeWatcher)*
+
 Manipulate the DOM and call events if the width of the viewport, or one of the element on the page, is between or out of a certain range.
 
 With responsive designs and adaptive layouts it becomes more and more needed to move around certain elements on the page. This can easily be done with SizeWatcher.
