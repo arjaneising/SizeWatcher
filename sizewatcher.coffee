@@ -86,7 +86,7 @@ class SizeWatcher
 
 
   reallyResize: (index = false) ->
-    return false if @doNothing
+    return false if @doNothing or !@container
 
     # Get the real inner width of the element in question
     if @boxSize is 'border-box' or (@boxSize is 'auto' and @container.nodeName.toLowerCase() is 'body')
